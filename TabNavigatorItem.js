@@ -3,13 +3,17 @@
 import React, {
   PropTypes,
 } from 'react';
+
 import {
   Text,
-  View,
+  Image,
 } from 'react-native';
 
 export default class TabNavigatorItem extends React.Component {
   static propTypes = {
+    style: Text.propTypes.style,
+    selectedStyle: Text.propTypes.style,
+    disabledStyle: Text.propTypes.style,
     renderIcon: PropTypes.func.isRequired,
     renderSelectedIcon: PropTypes.func,
     badgeText: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -20,11 +24,16 @@ export default class TabNavigatorItem extends React.Component {
     tabStyle: View.propTypes.style,
     selected: PropTypes.bool,
     onPress: PropTypes.func,
+    iconName: PropTypes.string,
+    iconSize: PropTypes.number,
+    iconColor: PropTypes.string,
+    iconSelectedColor: PropTypes.string,
     allowFontScaling: PropTypes.bool,
+    disabled: PropTypes.bool,
   };
 
   static defaultProps = {
-    renderIcon: () => <View />,
+    renderIcon: () => <Image />,
   };
 
   render() {

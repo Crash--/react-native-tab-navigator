@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Set } from 'immutable';
 import React, {
   PropTypes,
+} from 'react';
+import {
   StyleSheet,
   View,
 } from 'react-native';
@@ -160,7 +162,8 @@ export default class TabNavigator extends React.Component {
         disabledStyle={ item.props.disabledStyle }
         badge={badge}
         onPress={item.props.onPress}
-        hidesTabTouch={this.props.hidesTabTouch}>
+        hidesTabTouch={this.props.hidesTabTouch}
+        style={item.props.tabStyle}>
         {icon}
       </Tab>
     );

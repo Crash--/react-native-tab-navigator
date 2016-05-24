@@ -4,6 +4,8 @@ import NativeButton from './NativeButton';
 
 import React, {
   PropTypes,
+} from 'react';
+import {
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -51,6 +53,7 @@ export default class Tab extends React.Component {
         style: [styles.badge, badge.props.style],
       });
     }
+
 
     return (
       <NativeButton
